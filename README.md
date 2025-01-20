@@ -1,29 +1,40 @@
 # E-Cell Website
 
-## Overview
-Official website for the Entrepreneurship Cell, built with React, Vite, and Tailwind CSS.
+## Project Overview
+Official website for the Entrepreneurship Cell, built using React, Vite, and Tailwind CSS.
 
-## Deployment
-Deployed on GitHub Pages at: https://[your-username].github.io/ecell-website/
+## Prerequisites
+- Node.js (v18 or later)
+- npm
 
 ## Local Development
+
+### Installation
 1. Clone the repository
 2. Install dependencies:
-   ```bash
+   ```
    npm install
    ```
-3. Run development server:
-   ```bash
-   npm run dev
-   ```
-4. Build for production:
-   ```bash
-   npm run build
-   ```
+
+### Running the Project
+- Development mode:
+  ```
+  npm run dev
+  ```
+- Build for production:
+  ```
+  npm run build
+  ```
+- Preview production build:
+  ```
+  npm run preview
+  ```
 
 ## Technologies
 - React
 - Vite
 - Tailwind CSS
 - TypeScript
-- Framer Motion
+
+## Deployment
+Refer to your hosting platform's documentation for deployment instructions.
