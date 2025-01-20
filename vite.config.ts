@@ -1,13 +1,13 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import * as path from 'path'
-import { fileURLToPath } from 'url'
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
 export default defineConfig({
-  base: '/ecell-website/',  // Ensure this matches your repo name
+  base: '/ecellwebsite-/',  // Ensure this matches your repo name
   plugins: [react()],
   resolve: {
     alias: {
