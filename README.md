@@ -35,6 +35,3 @@ Official website for the Entrepreneurship Cell, built using React, Vite, and Tai
 - Vite
 - Tailwind CSS
 - TypeScript
-
-## Deployment
-Refer to your hosting platform's documentation for deployment instructions.
