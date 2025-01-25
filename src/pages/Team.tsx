@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { useNavigate } from 'react-router-dom'
 
 // Import team member images
 import team1 from '@/assets/team1.jpg'
@@ -49,6 +50,12 @@ const departments = [
 ]
 
 export default function Team() {
+  const navigate = useNavigate()
+
+  const goToHome = () => {
+    navigate('/')
+  }
+
   return (
     <main className="pt-20 pb-16">
       <div className="container">
@@ -65,6 +72,12 @@ export default function Team() {
             The passionate individuals behind E-Cell working together to foster
             entrepreneurship and innovation.
           </p>
+          <button 
+            onClick={goToHome} 
+            className="mt-4 px-4 py-2 bg-primary text-white rounded hover:bg-primary-dark transition-colors"
+          >
+            Back to Home
+          </button>
         </motion.div>
 
         {/* Department Filter */}
