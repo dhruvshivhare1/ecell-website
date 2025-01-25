@@ -1,6 +1,5 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { useNavigate } from 'react-router-dom'
 
 // Import team member images
 import team1 from '@/assets/team1.jpg'
@@ -50,12 +49,6 @@ const departments = [
 ]
 
 export default function Team() {
-  const navigate = useNavigate()
-
-  const goToHome = () => {
-    navigate('/')
-  }
-
   return (
     <main className="pt-20 pb-16">
       <div className="container">
@@ -72,12 +65,12 @@ export default function Team() {
             The passionate individuals behind E-Cell working together to foster
             entrepreneurship and innovation.
           </p>
-          <button 
-            onClick={goToHome} 
-            className="mt-4 px-4 py-2 bg-primary text-white rounded hover:bg-primary-dark transition-colors"
+          <a 
+            href="/ecell-website" 
+            className="mt-4 inline-block px-4 py-2 bg-primary text-white rounded hover:bg-primary-dark transition-colors"
           >
             Back to Home
-          </button>
+          </a>
         </motion.div>
 
         {/* Department Filter */}
@@ -114,21 +107,23 @@ export default function Team() {
                       href={member.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-white hover:text-primary"
+                      className="text-white hover:text-primary transition-colors"
                     >
-                      LinkedIn
+                      <i className="fab fa-linkedin"></i>
                     </a>
                     <a
                       href={`mailto:${member.email}`}
-                      className="text-white hover:text-primary"
+                      className="text-white hover:text-primary transition-colors"
                     >
-                      Email
+                      <i className="fas fa-envelope"></i>
                     </a>
                   </div>
                 </div>
               </div>
-              <h3 className="text-xl font-bold mb-1">{member.name}</h3>
-              <p className="text-gray-600 dark:text-gray-400">{member.role}</p>
+              <div className="text-center">
+                <h3 className="text-lg font-semibold">{member.name}</h3>
+                <p className="text-gray-600 dark:text-gray-400">{member.role}</p>
+              </div>
             </motion.div>
           ))}
         </div>
