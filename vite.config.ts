@@ -1,12 +1,11 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import path from 'node:path'
-import { fileURLToPath } from 'node:url'
+import path from 'path'
 
-const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
 export default defineConfig({
+  base: '/ecell-website/',
   plugins: [react()],
   resolve: {
     alias: {
@@ -17,8 +16,8 @@ export default defineConfig({
   build: {
     rollupOptions: {
       output: {
-        manualChunks(id: string) {
-          if (typeof id === 'string' && id.includes('node_modules')) {
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
             return 'vendor';
           }
         }
